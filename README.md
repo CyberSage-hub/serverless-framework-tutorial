@@ -64,7 +64,9 @@ serverless package --stage production --region cn-north-1
 
 ### serverless deploy部署项目
 - 项目打包完成后，将本地代码部署到aws上
-serverless deploy [Options]
+
+> serverless deploy [Options]
+
 > --config or -c 项目配置文件的文件名，例如serverless.yml|.yaml|.js|.json，默认serverless.yml
 
 > --noDeploy or -n 不部署到aws,仅仅是把代码打包配置好，版本在./serverless目录中
