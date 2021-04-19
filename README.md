@@ -60,3 +60,32 @@ serverless.yml 这个文件是项目自动化部署时，要用到的配置文�
 #执行完下命令后，会在打包路径下生成目录.serverless
 serverless package --stage production --region cn-north-1
 ```
+
+### serverless deploy部署项目
+- 项目打包完成后，将本地代码部署到aws上
+
+> --config or -c 项目配置文件的文件名，例如serverless.yml|.yaml|.js|.json，默认serverless.yml
+
+> --noDeploy or -n 不部署到aws,仅仅是把代码打包配置好，版本在./serverless目录中
+
+> --stage or -s 将要部署到什么环境，例如production
+
+> --region or -r 将要把项目部署到哪个区域，例如中国区cn-north-1
+
+> --package or -p 执行命令serverless package打包时候所指定的打包文件所在目录
+
+> --verbose or -v 显示部署期间的所有信息
+
+> --force 强制进行部署
+
+> --function or -f 仅仅部署某个函数，和--package选项不能同时使用
+
+> --conceal 不显示项目敏感信息，例如密钥信息
+
+> --aws-s3-accelerate 打开S3传输，使得上传速度更快
+
+> --no-aws-s3-accelerate 禁用S3传输
+
+```bash
+#命令示例
+serverless deploy --stage production --region cn-north-1
