@@ -39,7 +39,8 @@ serverless config credentials --provider aws --key xxxxxx --secret xxxxxx
 ```bash
 #命令示例
 serverless create --template aws-nodejs --path nodejsLambda  --name nodejs-lambda 
-提示创建成功，会产生下面三个文件
+
+#提示创建成功，会产生下面三个文件
 .gitignore
 handler.js 项目入口文件
 serverless.yml 这个文件是项目自动化部署时，要用到的配置文件
@@ -56,6 +57,6 @@ serverless.yml 这个文件是项目自动化部署时，要用到的配置文�
 > --package or -p 你将要把项目打包到哪个目录下
 
 ```bash 
+#执行完下命令后，会在打包路径下生成目录.serverless
 serverless package --stage production --region cn-north-1
-#执行完上面命令后，会在打包路径下生成目录.serverless
 ```
