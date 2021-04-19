@@ -1,7 +1,7 @@
 # serverless-framework-tutorial
-serverless-framework教程
-本教程运行环境:Ubuntu16.04
-主要介绍AWS平台上serverless
+- serverless-framework教程
+- 本教程运行环境:Ubuntu16.04
+- 主要介绍AWS平台上serverless
 ### 安装serverless 
 ```bash
 curl -o- -L https://slss.io/install | bash
@@ -63,7 +63,7 @@ serverless package --stage production --region cn-north-1
 
 ### serverless deploy部署项目
 - 项目打包完成后，将本地代码部署到aws上
-
+serverless deploy [Options]
 > --config or -c 项目配置文件的文件名，例如serverless.yml|.yaml|.js|.json，默认serverless.yml
 
 > --noDeploy or -n 不部署到aws,仅仅是把代码打包配置好，版本在./serverless目录中
