@@ -20,3 +20,18 @@ serverless config credentials --provider aws --key xxxxxx --secret xxxxxx
 --overwrite or -o 以当前配置覆盖~/.aws/credentials文件中的内容
 ```
 
+### serverless初始化一个新项目
+```bash
+serverless create [Options]
+--template or -t aws自带模板名称，例如aws-nodejs
+--template-url or -u 第三方模板地址，例如github上的模板，例如https://github.com/xxx/aws-nodejs
+--template-path 本地你自己的模板路径，例如/usr/local/nginx/template/aws-nodejs
+--path or -p 改项目将要创建在哪个目录下，例如/usr/local/nginx/lambda/nodejs-lambda/
+--name or -n 项目名称，该名称将会被写入到当前项目的serverless.yml文件中
+
+serverless create --template aws-nodejs --path nodejsLambda  --name nodejs-lambda 
+提示创建成功，会产生下面三个文件
+.gitignore
+handler.js 项目入口文件
+serverless.yml 这个文件是项目自动化部署时，要用到的配置文件
+```
