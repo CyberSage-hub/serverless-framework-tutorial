@@ -25,10 +25,10 @@ serverless config credentials --provider aws --key xxxxxx --secret xxxxxx
 
 ### 初始化一个新项目serverless create
 > serverless create [Options]
-> --template or -t aws自带模板名称，例如aws-nodejs
-> --template-url or -u 第三方模板地址，例如github上的模板，例如https://github.com/xxx/aws-nodejs
-> --template-path 本地你自己的模板路径，例如/usr/local/nginx/template/aws-nodejs
-> --path or -p 改项目将要创建在哪个目录下，例如/usr/local/nginx/lambda/nodejs-lambda/
+--template or -t aws自带模板名称，例如aws-nodejs
+--template-url or -u 第三方模板地址，例如github上的模板，例如https://github.com/xxx/aws-nodejs
+--template-path 本地你自己的模板路径，例如/usr/local/nginx/template/aws-nodejs
+--path or -p 改项目将要创建在哪个目录下，例如/usr/local/nginx/lambda/nodejs-lambda/
 > --name or -n 项目名称，该名称将会被写入到当前项目的serverless.yml文件中
 
 ```bash
