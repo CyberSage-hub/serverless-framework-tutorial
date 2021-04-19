@@ -92,3 +92,5 @@ serverless package --stage production --region cn-north-1
 ```bash
 #命令示例
 serverless deploy --stage production --region cn-north-1
+```
+> 登录到AWS控制台，找到cloudformation和AWS lambda，可以看到上面部署的项目
