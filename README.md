@@ -20,7 +20,7 @@ serverless config credentials --provider aws --key xxxxxx --secret xxxxxx
 --overwrite or -o 以当前配置覆盖~/.aws/credentials文件中的内容
 ```
 
-### serverless create初始化一个新项目
+### 初始化一个新项目serverless create
 ```bash
 serverless create [Options]
 --template or -t aws自带模板名称，例如aws-nodejs
