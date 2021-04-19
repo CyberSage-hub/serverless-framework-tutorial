@@ -166,11 +166,11 @@ functions:
 serverless invoke --function hello //本地调试调用hello函数
 ```
 
-- 部署到aws
+### 部署到aws
 
- ```
- serverless deploy --stage production --region cn-north-1 #后面参数可以省略，因上面修改了serverless.yml文件文件，配置了区域和stage
- ```
-- 到aws控制台查看
- 
+```
+#后面参数可以省略，因上面修改了serverless.yml文件文件，配置了区域和stage
+serverless deploy --stage production --region cn-north-1
+```
+ - 到aws控制台查看
  
