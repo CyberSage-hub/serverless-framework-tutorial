@@ -94,3 +94,45 @@ serverless package --stage production --region cn-north-1
 serverless deploy --stage production --region cn-north-1
 ```
 > 登录到AWS控制台，找到cloudformation和AWS lambda，可以看到上面部署的项目
+
+
+### 实战
+- 执行下面命令，创建package.json文件
+```
+npm init //一路回车
+```
+
+- 安装第三方模块：md5.js
+
+```javascript
+npm install -D md5 #安装
+```
+
+- 修改hander.js文件
+ ```javascript
+'use strict';
+module.exports.hello = async (event) => {
+    const md5 = require('md5');
+    let name = "123456";
+    let str = md5(name);
+    return {
+        statusCode: 200,
+        body: JSON.stringify(
+            {
+                message: 'Go Serverless v1.0! Your function executed successfully!' + str,
+                input: event,
+            },
+            null,
+            2
+        ),
+    };
+};
+ ```
+ 
+- 部署到aws
+ ```
+ serverless deploy --stage production --region cn-north-1
+ ```
+- 到aws控制台查看
+ 
+ 
