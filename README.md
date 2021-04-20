@@ -61,9 +61,7 @@ serverless package --stage production --region cn-north-1
 ```
 
 ### serverless deploy部署项目
-- 项目打包完成后，将本地代码部署到aws上
-
-> serverless deploy [Options]
+serverless deploy [Options]
 
 > --config or -c 项目配置文件的文件名，例如serverless.yml|.yaml|.js|.json，默认serverless.yml
 
@@ -103,12 +101,9 @@ serverless deploy list functions 列出发布过的函数列表
 mkdir -p layer/nodejs #必须将第三方模块安装在layer/nodejs文件夹下
 cd layer/nodejs
 npm init //一路回车
+npm install -D md5 #安装第三方模块：md5.js
 ```
 
-- 安装第三方模块：md5.js
-
-```javascript
-npm install -D md5 #安装
 ```
 
 - 修改hander.js文件
@@ -172,7 +167,6 @@ serverless invoke --function hello //本地调试调用hello函数
 ### 部署到aws
 
 ```
-#后面参数可以省略，因上面修改了serverless.yml文件文件，配置了区域和stage
 serverless deploy #由于在上面已经在serverless.yml中配置了stage，region，此处可以直接不带参数
 ```
  - 到aws控制台查看
