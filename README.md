@@ -214,5 +214,6 @@ serverless remove --stage dev --region cn-north-1 --verbose #删除部署在dev�
 serverless print #打印serverless.yml中的配置信息
 ```
 
+# serverless-framework event
 
  
