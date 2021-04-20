@@ -208,4 +208,11 @@ serverless rollback -t 1618840660250 -v #回滚时候输出详细日志信息
 ```
 serverless remove --stage dev --region cn-north-1 --verbose #删除部署在dev和cn-north-1上的项目，并输出详细信息
 ```
+
+### serverless print 打印serverless.yml中的配置信息
+```
+serverless print #打印serverless.yml中的配置信息
+```
+
+
  
