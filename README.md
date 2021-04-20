@@ -187,5 +187,14 @@ serverless metrics --function hello #查看hello函数24小时内监控信息（
 serverless metrics --function hello --startTime 2021-01-01 --endTime 2021-08-02 #查看某个时间段内hello函数的监控信息
 ```
 
+### serverless info
+查看项目信息
+```
+serverless info #查看项目信息
+serverless info --stage dev #查看部署在dev环境上的项目信息
+serverless info --region cn-north-1 #查看部署在cn-north-1上的项目信息
+serverless info --verbose #查看部署项目的详细信息
+```
+
 
  
