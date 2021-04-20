@@ -91,7 +91,9 @@ serverless package --stage production --region cn-north-1
 
 ```bash
 #命令示例
-serverless deploy --stage production --region cn-north-1
+serverless deploy --stage production --region cn-north-1 #部署项目到aws
+serverless deploy list 列出发布过的历史记录列表
+serverless deploy list functions 列出发布过的函数列表
 ```
 > 登录到AWS控制台，找到cloudformation和AWS lambda，可以看到上面部署的项目
 
@@ -143,11 +145,13 @@ npm-debug.log
 .serverless_plugins/**
 ```
 
-- 修改serverless.yml文件，新增：
+### 修改serverless.yml文件
+- 为省去每次部署打包时候都要带各种参数的麻烦，可以修改serverless.yml，对其中配置项进行配置
 ```
-  stage: production
-  region: cn-north-1
-  
+  stage: production #每次部署的默认环境，可以使production、dev或者其他
+  region: cn-north-1 #国家区域
+ 
+#对于安装的第三方模块，默认不会被打包上传，可以配置layer
 layers:
   commonLibs:
     path: layer
@@ -162,6 +166,7 @@ functions:
       - {Ref: CommonLibsLambdaLayer}
 ```
 ### invoke本地调试项目
+避免每次调试都要发布，可以在本地调试，之后再进行部署
 ```
 serverless invoke --function hello //本地调试调用hello函数
 ```
@@ -170,11 +175,9 @@ serverless invoke --function hello //本地调试调用hello函数
 
 ```
 #后面参数可以省略，因上面修改了serverless.yml文件文件，配置了区域和stage
-serverless deploy --stage production --region cn-north-1
+serverless deploy #由于在上面已经在serverless.yml中配置了stage，region，此处可以直接不带参数
 ```
  - 到aws控制台查看
 
-serverless deploy list 列出发布过的历史记录
 
-serverless deploy list functions 列出发布过的函数列表
  
