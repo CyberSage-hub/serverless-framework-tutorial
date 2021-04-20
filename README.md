@@ -187,8 +187,8 @@ serverless metrics --function hello #查看hello函数24小时内监控信息（
 serverless metrics --function hello --startTime 2021-01-01 --endTime 2021-08-02 #查看某个时间段内hello函数的监控信息
 ```
 
-### serverless info
-查看项目信息
+### serverless info 查看项目信息
+
 ```
 serverless info #查看项目信息
 serverless info --stage dev #查看部署在dev环境上的项目信息
@@ -196,14 +196,16 @@ serverless info --region cn-north-1 #查看部署在cn-north-1上的项目信息
 serverless info --verbose #查看部署项目的详细信息
 ```
 
-### serverless rollback 
-项目回滚
+### serverless rollback  项目回滚
+
 ```
 serverless deploy list #先查看部署历史版本记录
 serverless rollback -t 1618840660250 #上面命令执行后，可以看到每条更新记录的Timestamp信息，将Timestamp信息填写到这里的-t即可
 serverless rollback -t 1618840660250 --verbose #回滚时候输出详细日志信息
 serverless rollback -t 1618840660250 -v #回滚时候输出详细日志信息
 ```
-
-
+### serverless remove 项目移除
+```
+serverless remove --stage dev --region cn-north-1 --verbose #删除部署在dev和cn-north-1上的项目，并输出详细信息
+```
  
