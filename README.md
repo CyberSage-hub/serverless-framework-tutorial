@@ -7,7 +7,9 @@ curl -o- -L https://slss.io/install | bash
 #安装完成后，查看是否安装成功
 serverless -v
 ```
-### 设置aws credentials
+### 设置serverless credentials
+serverless config credentials [Options]
+
 > --provider or -p 填aws 必填
 
 > --key or -k aws_access_key_id 必填
@@ -23,7 +25,7 @@ serverless config credentials --provider aws --key xxxxxx --secret xxxxxx
 ```
 
 ### 初始化一个新项目serverless create
-> serverless create [Options]
+serverless create [Options]
 
 > --template or -t aws自带模板名称，例如aws-nodejs
 
@@ -45,9 +47,7 @@ handler.js 项目入口文件
 serverless.yml 这个文件是项目自动化部署时，要用到的配置文件
 ```
 ### serverless package打包项目
-
-
-> serverless package  [Options]
+serverless package  [Options]
 
 > --stage or -s 将要部署到什么环境，例如production
 
