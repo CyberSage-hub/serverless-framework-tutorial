@@ -172,4 +172,20 @@ serverless deploy #由于在上面已经在serverless.yml中配置了stage，reg
  - 到aws控制台查看
 
 
+### serverless logs
+```
+serverless logs -f hello #在aws控制台执行了lambda函数，此处会打印函数执行产生日志信息
+serverless logs -f hello -t #-t 即tail，实时监控日志信息，当你在aws控制台执行了lambda函数，此处会实时打印函数执行时产生的日志信息
+```
+
+### serverless metrics
+查看监控信息
+```
+serverless metrics #查看24小时内监控信息（默认查看24小时内）
+serverless metrics --startTime 2021-01-01 --endTime 2021-08-02 #查看某个时间段内的监控信息
+serverless metrics --function hello #查看hello函数24小时内监控信息（默认查看24小时内）
+serverless metrics --function hello --startTime 2021-01-01 --endTime 2021-08-02 #查看某个时间段内hello函数的监控信息
+```
+
+
  
