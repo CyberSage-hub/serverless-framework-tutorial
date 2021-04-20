@@ -196,5 +196,14 @@ serverless info --region cn-north-1 #查看部署在cn-north-1上的项目信息
 serverless info --verbose #查看部署项目的详细信息
 ```
 
+### serverless rollback 
+项目回滚
+```
+serverless deploy list #先查看部署历史版本记录
+serverless rollback -t 1618840660250 #上面命令执行后，可以看到每条更新记录的Timestamp信息，将Timestamp信息填写到这里的-t即可
+serverless rollback -t 1618840660250 --verbose #回滚时候输出详细日志信息
+serverless rollback -t 1618840660250 -v #回滚时候输出详细日志信息
+```
+
 
  
